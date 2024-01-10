@@ -1,3 +1,4 @@
+/*formatea los valores y separa por puntos*/
 const separarPorPuntos = (numero) => {
     return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 };
