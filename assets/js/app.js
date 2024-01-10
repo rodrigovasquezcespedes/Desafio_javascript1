@@ -12,15 +12,26 @@ const cantidad = document.querySelector(".cantidad");
 const botonMas = document.querySelector(".mas");
 const botonMenos = document.querySelector(".menos");
 const valorTotal = document.querySelector(".valor-total");
+const stock = document.querySelector(".stock");
 
 const aumentar = () => {
-    contador++;
-    cantidad.innerHTML = contador;
-    calcularTotal();
+    if (contador >= 5) {
+        stock.style.display="block";
+        cantidad.style.color="red";
+        precioSpan.style.textDecoration=" line-through red";
+    } else {
+        contador++;
+        cantidad.innerHTML = contador;
+        calcularTotal();
+    }
 };
 
 const disminuir = () => {
     if (contador > 0) {
+        stock.style.display="none";
+        stock.style.display="line";
+        cantidad.style.color="white";
+        precioSpan.style.textDecoration="";
         contador--;
         cantidad.innerHTML = contador;
         calcularTotal();
@@ -35,6 +46,3 @@ const calcularTotal = () => {
 
 botonMas.addEventListener('click', aumentar);
 botonMenos.addEventListener('click', disminuir);
-
-
-
