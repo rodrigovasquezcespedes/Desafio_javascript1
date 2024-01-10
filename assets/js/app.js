@@ -15,14 +15,15 @@ const valorTotal = document.querySelector(".valor-total");
 const stock = document.querySelector(".stock");
 
 const aumentar = () => {
-    if (contador >= 5) {
-        stock.style.display="block";
-        cantidad.style.color="red";
-        precioSpan.style.textDecoration=" line-through red";
-    } else {
+   
+    if (contador < 5) {
         contador++;
         cantidad.innerHTML = contador;
         calcularTotal();
+    } else {
+        stock.style.display="block";
+        cantidad.style.color="red";
+        valorTotal.style.textDecoration=" line-through red";
     }
 };
 
@@ -31,7 +32,7 @@ const disminuir = () => {
         stock.style.display="none";
         stock.style.display="line";
         cantidad.style.color="white";
-        precioSpan.style.textDecoration="";
+        valorTotal.style.textDecoration="";
         contador--;
         cantidad.innerHTML = contador;
         calcularTotal();
