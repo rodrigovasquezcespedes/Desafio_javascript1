@@ -1,7 +1,5 @@
 /*formatea los valores y separa por puntos*/
-const separarPorPuntos = (numero) => {
-    return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
-};
+
 
 precio = 400000
 precioSpan = document.querySelector(".precio-inicial");
@@ -13,6 +11,10 @@ const botonMas = document.querySelector("#mas");
 const botonMenos = document.querySelector("#menos");
 const valorTotal = document.querySelector("#valor-total");
 const stock = document.querySelector(".stock");
+
+const separarPorPuntos = (numero) => {
+    return numero.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+};
 
 const aumentar = () => {
 
