@@ -9,9 +9,9 @@ precioSpan.innerHTML = separarPorPuntos(precio);
 
 let contador = 0;
 const cantidad = document.querySelector(".cantidad");
-const botonMas = document.querySelector(".mas");
-const botonMenos = document.querySelector(".menos");
-const valorTotal = document.querySelector(".valor-total");
+const botonMas = document.querySelector("#mas");
+const botonMenos = document.querySelector("#menos");
+const valorTotal = document.querySelector("#valor-total");
 const stock = document.querySelector(".stock");
 
 const aumentar = () => {
